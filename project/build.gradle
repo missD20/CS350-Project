@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id 'application'
 }
 
 repositories {
@@ -10,6 +11,16 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter:5.11.0'
 }
 
+application {
+    mainClass = 'edu.odu.cs.cs350.CommandLineInterface'
+}
+
 test {
     useJUnitPlatform()
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'edu.odu.cs.cs350.CommandLineInterface'
+    }
 }
