@@ -9,7 +9,7 @@ public class Token {
     private int lineNumber;
     private int columnNumber;
 
-    /*
+    /**
      * Token objects
      */
     public Token(String kind, String lexeme, int lineNumber, int columnNumber) {
